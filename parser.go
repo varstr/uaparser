@@ -32,12 +32,10 @@ func parseBrowser(ua string, spec *browserSpec) (info *InfoItem, ok bool){
     info.Name = spec.name
     ok = true
 
-    for _, verSp := range spec.versionSplitters {
-        if strings.Contains(ua, verSp[0]) {
-            if rmLeft := strings.Split(ua, verSp[0])[1]; strings.Contains(rmLeft, verSp[1]) {
-                info.Version = strings.TrimSpace(strings.Split(rmLeft, verSp[1])[0])
-                break
-            }
+    for _, splitter := range spec.versionSplitters {
+        if strings.Contains(ua, splitter[0]) {
+            info.Version = strings.TrimSpace(strings.Split(strings.Split(ua, splitter[0])[1], splitter[1])[0])
+            break
         }
     }
     return
