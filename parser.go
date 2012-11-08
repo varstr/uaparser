@@ -43,7 +43,7 @@ func parseBrowser(ua string, spec *browserSpec) (info *InfoItem, ok bool){
 
 func Parse(ua string) (info *UAInfo) {
     info = new(UAInfo)
-    for _, browser := range BROWSERS {
+    for _, browser := range _BROWSERS {
         if browserInfo, ok := parseBrowser(ua, browser); ok {
             info.Browser = browserInfo
             break

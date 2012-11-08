@@ -49,7 +49,7 @@ var opera *browserSpec = &browserSpec {
 }
 
 
-var BROWSERS []*browserSpec = []*browserSpec {
+var _BROWSERS []*browserSpec = []*browserSpec {
     ie,
     firefox,
     safari,
