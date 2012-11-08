@@ -43,10 +43,10 @@ func parseBrowser(ua string, spec *browserSpec) (info *InfoItem, ok bool){
     return
 }
 
-func Parse(ua string) (info *UAInfo, ok bool) {
+func Parse(ua string) (info *UAInfo) {
+    info = new(UAInfo)
     for _, browser := range BROWSERS {
         if browserInfo, ok := parseBrowser(ua, browser); ok {
-            info = new(UAInfo)
             info.Browser = browserInfo
             break
         }
