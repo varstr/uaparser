@@ -28,6 +28,7 @@ func parseBrowser(ua string, spec *browserSpec) (info *InfoItem, ok bool){
         }
     }
 
+    info = new(InfoItem)
     info.Name = spec.name
     ok = true
 
