@@ -41,7 +41,7 @@ var chrome *browserSpec = &browserSpec {
 var opera *browserSpec = &browserSpec {
     name: "Opera",
     mustContains: []string{"Opera"},
-    mustNotContains: []string{"Opera"},
+    mustNotContains: []string{},
     versionSplitters: [][]string{
         []string{"Version/", " "},
         []string{"Opera/", " "},
