@@ -1,13 +1,6 @@
 package uaparser
 
-type browserSpec struct {
-    name string
-    mustContains []string
-    mustNotContains []string
-    versionSplitters [][]string
-}
-
-var ie *browserSpec = &browserSpec {
+var ie *itemSpec = &itemSpec {
     name: "IE",
     mustContains: []string{"MSIE"},
     mustNotContains: []string{
@@ -19,14 +12,14 @@ var ie *browserSpec = &browserSpec {
     versionSplitters: [][]string{[]string{"MSIE ", ";"}},
 }
 
-var firefox *browserSpec = &browserSpec {
+var firefox *itemSpec = &itemSpec {
     name: "Firefox",
     mustContains: []string{"Firefox"},
     mustNotContains: []string{"Seamonkey"},
     versionSplitters: [][]string{[]string{"Firefox/", " "}},
 }
 
-var safari *browserSpec = &browserSpec {
+var safari *itemSpec = &itemSpec {
     name: "Safari",
     mustContains: []string{"Safari"},
     mustNotContains: []string{
@@ -41,7 +34,7 @@ var safari *browserSpec = &browserSpec {
     },
 }
 
-var chrome *browserSpec = &browserSpec {
+var chrome *itemSpec = &itemSpec {
     name: "Chrome",
     mustContains: []string{"Chrome"},
     mustNotContains: []string{
@@ -53,7 +46,7 @@ var chrome *browserSpec = &browserSpec {
     versionSplitters: [][]string{[]string{"Chrome/", " "}},
 }
 
-var opera *browserSpec = &browserSpec {
+var opera *itemSpec = &itemSpec {
     name: "Opera",
     mustContains: []string{"Opera"},
     mustNotContains: []string{},
@@ -63,34 +56,34 @@ var opera *browserSpec = &browserSpec {
     },
 }
 
-var _360se *browserSpec = &browserSpec {
+var _360se *itemSpec = &itemSpec {
     name: "360SE",
     mustContains: []string{"360SE"},
     mustNotContains: []string{},
 }
 
-var sougou *browserSpec = &browserSpec {
+var sougou *itemSpec = &itemSpec {
     name: "Sougou",
     mustContains: []string{"SE", "MetaSr"},
     mustNotContains: []string{},
     versionSplitters: [][]string{[]string{"SE ", " "}},
 }
 
-var tencent *browserSpec = &browserSpec {
+var tencent *itemSpec = &itemSpec {
     name: "Tencent",
     mustContains: []string{"TencentTraveler"},
     mustNotContains: []string{"SE", "MetaSr"},
     versionSplitters: [][]string{[]string{"TencentTraveler ", " "}},
 }
 
-var qq *browserSpec = &browserSpec {
+var qq *itemSpec = &itemSpec {
     name: "QQ",
     mustContains: []string{"QQBrowser"},
     mustNotContains: []string{},
     versionSplitters: [][]string{[]string{"QQBrowser/", " "}},
 }
 
-var maxthon *browserSpec = &browserSpec {
+var maxthon *itemSpec = &itemSpec {
     name: "Maxthon",
     mustContains: []string{"Maxthon"},
     mustNotContains: []string{},
@@ -100,7 +93,7 @@ var maxthon *browserSpec = &browserSpec {
     },
 }
 
-var _BROWSERS []*browserSpec = []*browserSpec {
+var _BROWSERS []*itemSpec = []*itemSpec {
     ie,
     firefox,
     safari,
