@@ -15,7 +15,7 @@ type UAInfo struct {
     Os *InfoItem
 }
 
-func parseBrowser(ua string, spec *browserSpec) (info *InfoItem, ok bool){
+func parseBrowser(ua string, spec *browserSpec) (info *InfoItem, ok bool) {
     for _, mc := range spec.mustContains {
         if !strings.Contains(ua, mc) {
             return
