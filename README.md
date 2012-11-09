@@ -34,6 +34,18 @@ func main() {
                 "\ndevice:", rs2.Device,
                 "\nos:", rs2.OS.Name, "version:", rs2.OS.Version)
 }
+
+/*
+ua: (Macintosh; U; Intel Mac OS X 10_6_3; en-us) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16
+browser: Safari version: 5.0
+device: Macintosh
+os: Mac OS version: X 10_6_3
+
+ua: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.33 Safari/534.3 SE 2.X MetaSr 1.0
+browser: Sougou version: 2.X
+device: <nil>
+os: Windows version: NT 5.1
+*/
 </code></pre>
 
 ##TODO##
