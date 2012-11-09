@@ -11,8 +11,8 @@ var macOS *itemSpec = &itemSpec{
     mustContains: []string{"Mac OS"},
     mustNotContains: []string{"iPad", "iPhone", "iPod"},
     versionSplitters: [][]string{
-        []string{"Mac OS ", ")"},
         []string{"Mac OS ", ";"},
+        []string{"Mac OS ", ")"},
     },
 }
 
