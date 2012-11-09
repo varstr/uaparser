@@ -20,7 +20,7 @@ type InfoItem struct {
 type UAInfo struct {
     Browser,
     Device,
-    Os *InfoItem
+    OS *InfoItem
 }
 
 func isEmptyString(str string) bool {
@@ -77,7 +77,7 @@ func Parse(ua string) (info *UAInfo) {
 
     info.Browser = searchIn(ua, _BROWSERS)
     info.Device = searchIn(ua, _DEVICES)
-    //info.OS = searchIn(ua, _OS)
+    info.OS = searchIn(ua, _OS)
 
     return
 }
