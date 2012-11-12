@@ -31,7 +31,7 @@ func main() {
 
     fmt.Println("ua:", ua2,
                 "\nbrowser:", rs2.Browser.Name, "version:", rs2.Browser.Version,
-                "\ndevice:", rs2.Device,
+                "\ndevice:", rs2.Device.Name,
                 "\nos:", rs2.OS.Name, "version:", rs2.OS.Version)
 }
 
@@ -43,7 +43,7 @@ os: Mac OS version: X 10_6_3
 
 ua: Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.3 (KHTML, like Gecko) Chrome/6.0.472.33 Safari/534.3 SE 2.X MetaSr 1.0
 browser: Sougou version: 2.X
-device: <nil>
+device: PC
 os: Windows version: NT 5.1
 */
 </code></pre>

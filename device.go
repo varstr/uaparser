@@ -20,9 +20,16 @@ var mac *itemSpec = &itemSpec{
     mustContains: []string{"Macintosh"},
 }
 
+var pc *itemSpec = &itemSpec{
+    name: "PC",
+    mustContains: []string{"Windows"},
+    mustNotContains: []string{"Windows Phone"},
+}
+
 var _DEVICES []*itemSpec = []*itemSpec {
     iPad,
     iPhone,
     iPod,
     mac,
+    pc,
 }
