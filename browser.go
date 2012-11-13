@@ -6,7 +6,7 @@ var ie *itemSpec = &itemSpec {
     mustNotContains: []string{
         "360SE",
         "Maxthon",
-        "SE", "MetaSr",
+        "SE ", "MetaSr",
         "TencentTraveler", "QQBrowser",
     },
     versionSplitters: [][]string{[]string{"MSIE ", ";"}},
@@ -25,8 +25,11 @@ var safari *itemSpec = &itemSpec {
     mustNotContains: []string{
         "Chrome", "Chromium",
         "Maxthon",
+        "LBBROWSER",
+        "QIHU",
         "QQBrowser",
-        "SE", "MetaSr",
+        "SE ", "MetaSr",
+        "TaoBrowser",
     },
     versionSplitters: [][]string{
         []string{"Version/", " "},
@@ -39,9 +42,12 @@ var chrome *itemSpec = &itemSpec {
     mustContains: []string{"Chrome"},
     mustNotContains: []string{
         "Chromium",
+        "LBBROWSER",
         "Maxthon",
+        "QIHU",
         "QQBrowser",
-        "SE", "MetaSr",
+        "SE ", "MetaSr",
+        "TaoBrowser",
     },
     versionSplitters: [][]string{[]string{"Chrome/", " "}},
 }
@@ -64,7 +70,7 @@ var _360se *itemSpec = &itemSpec {
 
 var sougou *itemSpec = &itemSpec {
     name: "Sougou",
-    mustContains: []string{"SE", "MetaSr"},
+    mustContains: []string{"SE ", "MetaSr"},
     mustNotContains: []string{},
     versionSplitters: [][]string{[]string{"SE ", " "}},
 }
@@ -72,7 +78,7 @@ var sougou *itemSpec = &itemSpec {
 var tencent *itemSpec = &itemSpec {
     name: "Tencent",
     mustContains: []string{"TencentTraveler"},
-    mustNotContains: []string{"SE", "MetaSr"},
+    mustNotContains: []string{"SE ", "MetaSr"},
     versionSplitters: [][]string{[]string{"TencentTraveler ", " "}},
 }
 
