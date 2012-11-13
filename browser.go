@@ -6,6 +6,7 @@ var ie *itemSpec = &itemSpec {
     mustNotContains: []string{
         "360SE",
         "Maxthon",
+        "qihu",
         "QIHU",
         "QQBrowser",
         "QQDownload",
@@ -66,7 +67,7 @@ var opera *itemSpec = &itemSpec {
 
 var _360se *itemSpec = &itemSpec {
     name: "360SE",
-    mustContains: []string{"360SE", "QIHU"},
+    mustContains: []string{"360SE", "qihu", "QIHU"},
     mustNotContains: []string{},
 }
 
@@ -78,14 +79,14 @@ var sougou *itemSpec = &itemSpec {
 }
 
 var tencent *itemSpec = &itemSpec {
-    name: "Tencent",
+    name: "Tencent Traveler",
     mustContains: []string{"TencentTraveler"},
     mustNotContains: []string{"SE ", "MetaSr"},
     versionSplitters: [][]string{[]string{"TencentTraveler ", " "}},
 }
 
 var qq *itemSpec = &itemSpec {
-    name: "QQ",
+    name: "QQ Browser",
     mustContains: []string{"QQBrowser"},
     mustNotContains: []string{},
     versionSplitters: [][]string{[]string{"QQBrowser/", " "}},
