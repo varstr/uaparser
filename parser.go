@@ -32,18 +32,18 @@ func isEmptyString(str string) bool {
     return true
 }
 
-func matchSpec(ua string, spec *itemSpec) (info *InfoItem, ok bool) {
-    for _, mc := range spec.mustContains {
-        if !strings.Contains(ua, mc) {
-            return
+func contains(ua string, tokens []string) bool {
+    for _, tk := range tokens {
+        if strings.Contains(ua, tk) {
+            return true
         }
     }
+    return false
+}
 
-    for _, mnc := range spec.mustNotContains {
-        if strings.Contains(ua, mnc) {
-            return
-        }
-    }
+func matchSpec(ua string, spec *itemSpec) (info *InfoItem, ok bool) {
+    if !contains(ua, spec.mustContains) { return }
+    if contains(ua, spec.mustNotContains) { return }
 
     info = new(InfoItem)
     info.Name = spec.name

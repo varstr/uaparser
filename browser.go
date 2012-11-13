@@ -6,8 +6,11 @@ var ie *itemSpec = &itemSpec {
     mustNotContains: []string{
         "360SE",
         "Maxthon",
+        "QIHU",
+        "QQBrowser",
+        "QQDownload",
         "SE ", "MetaSr",
-        "TencentTraveler", "QQBrowser",
+        "TencentTraveler",
     },
     versionSplitters: [][]string{[]string{"MSIE ", ";"}},
 }
@@ -63,7 +66,7 @@ var opera *itemSpec = &itemSpec {
 
 var _360se *itemSpec = &itemSpec {
     name: "360SE",
-    mustContains: []string{"360SE"},
+    mustContains: []string{"360SE", "QIHU"},
     mustNotContains: []string{},
 }
 
