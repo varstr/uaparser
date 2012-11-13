@@ -33,7 +33,6 @@ var safari *itemSpec = &itemSpec {
     },
     versionSplitters: [][]string{
         []string{"Version/", " "},
-        []string{"Safari/", " "},
     },
 }
 
