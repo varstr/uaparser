@@ -28,6 +28,7 @@ var safari *itemSpec = &itemSpec {
     mustContains: []string{"Safari"},
     mustNotContains: []string{
         "Chrome", "Chromium",
+        "CoolNovo",
         "Maxthon",
         "LBBROWSER",
         "QIHU",
@@ -45,6 +46,7 @@ var chrome *itemSpec = &itemSpec {
     mustContains: []string{"Chrome"},
     mustNotContains: []string{
         "Chromium",
+        "CoolNovo",
         "LBBROWSER",
         "Maxthon",
         "QIHU",
