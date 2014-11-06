@@ -35,11 +35,11 @@ var (
             []string{"Android-", " "},
         },
     }
-
+    
     iOS = &itemSpec{
         name: "iOS",
         mustContains: []string{"CPU", "OS", "like Mac OS X"},
-        mustNotContains: []string{},
+        mustNotContains: []string{"Windows Phone OS"},
         versionSplitters: [][]string{
             []string{"CPU iPhone OS ", " "},
             []string{"CPU OS ", " "},
