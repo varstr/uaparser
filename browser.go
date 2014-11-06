@@ -3,7 +3,7 @@ package uaparser
 var (
     ie = &itemSpec {
         name: "IE",
-        mustContains: []string{"MSIE"},
+        mustContains: []string{"MSIE", "rv:11.0"},
         mustNotContains: []string{
             "360SE",
             "Maxthon",
