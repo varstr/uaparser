@@ -48,7 +48,7 @@ var (
 
     wpOS = &itemSpec{
         name: "Windows Phone OS",
-        mustContains: []string{"Windows Phone OS"},
+        mustContains: []string{"Windows Phone OS", "Windows Phone"},
         mustNotContains: []string{},
         versionSplitters: [][]string{
             []string{"Windows Phone OS ", ";"},
