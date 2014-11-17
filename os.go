@@ -56,7 +56,7 @@ var (
 	}
 
 	playstationOS = &itemSpec{
-		name:         "Playstation OS",
+		name:         "PlayStation OS",
 		mustContains: []string{"PlayStation", "PLAYSTATION"},
 		versionSplitters: [][]string{
 			[]string{"PLAYSTATION", "3"},
