@@ -11,31 +11,40 @@ var (
 			"QIHU",
 			"QQBrowser",
 			"QQDownload",
-			"SE ", "MetaSr",
+			"SE ",
+			"MetaSr",
 			"TencentTraveler",
+			"Firefox",
+			"Opera",
+			"MAXTHON",
 		},
 		versionSplitters: [][]string{[]string{"MSIE ", ";"}},
 	}
 
 	firefox = &itemSpec{
 		name:             "Firefox",
-		mustContains:     []string{"Firefox"},
-		mustNotContains:  []string{"Seamonkey"},
+		mustContains:     []string{"Firefox", "firefox"},
+		mustNotContains:  []string{"Seamonkey", "Opera"},
 		versionSplitters: [][]string{[]string{"Firefox/", " "}},
 	}
 
 	safari = &itemSpec{
 		name:         "Safari",
-		mustContains: []string{"Safari"},
+		mustContains: []string{"Safari", "AppleWebKit"},
 		mustNotContains: []string{
-			"Chrome", "Chromium",
+			"Chrome",
+			"Chromium",
 			"CoolNovo",
 			"Maxthon",
 			"LBBROWSER",
 			"QIHU",
 			"QQBrowser",
-			"SE ", "MetaSr",
+			"SE ",
+			"MetaSr",
 			"TaoBrowser",
+			"PlayStation",
+			"PLAYSTATION",
+			"Opera",
 		},
 		versionSplitters: [][]string{
 			[]string{"Version/", " "},
@@ -46,13 +55,13 @@ var (
 		name:         "Chrome",
 		mustContains: []string{"Chrome"},
 		mustNotContains: []string{
-			"Chromium",
 			"CoolNovo",
 			"LBBROWSER",
 			"Maxthon",
 			"QIHU",
 			"QQBrowser",
-			"SE ", "MetaSr",
+			"SE ",
+			"MetaSr",
 			"TaoBrowser",
 		},
 		versionSplitters: [][]string{[]string{"Chrome/", " "}},
@@ -97,7 +106,7 @@ var (
 
 	maxthon = &itemSpec{
 		name:            "Maxthon",
-		mustContains:    []string{"Maxthon"},
+		mustContains:    []string{"Maxthon", "MAXTHON"},
 		mustNotContains: []string{},
 		versionSplitters: [][]string{
 			[]string{"Maxthon/", " "},
