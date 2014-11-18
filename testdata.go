@@ -4801,6 +4801,12 @@ func GetOSNames() map[string][]string {
 
 func GetDeviceTypes() map[string][]string {
 	var expectedDeviceTypes map[string][]string = make(map[string][]string)
+	expectedDeviceTypes["Desktop"] = []string{
+		"Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1) Opera 7.23",
+		"Mozilla/5.0/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/531.0 (KHTML, like Gecko) Chrome/3.0.191.0 Safari/531.0",
+		"Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
+		"Mozilla/5.0 (Windows NT 5.1; rv:31.0) Gecko/20100101 Firefox/31.0",
+	}
 	expectedDeviceTypes["Tablet"] = []string{
 		"Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) AppleWebKit/536.26 (KHTML, like Gecko) Version/6.0 Mobile/10A5355d Safari/8536.25",
 		"Mozilla/5.0 (Linux; U; Android 3.0; en-us; Xoom Build/HRI39) AppleWebKit/534.13 (KHTML, like Gecko) Version/4.0 Safari/534.13",
