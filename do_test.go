@@ -6,9 +6,11 @@ import "fmt"
 func TestParse(t *testing.T) {
 	var expectedBrowserNames map[string][]string = GetBrowserNames()
 	var expectedOperatingSystems map[string][]string = GetOSNames()
+	var expectedDeviceTypes map[string][]string = GetDeviceTypes()
 
 	_checkExepectations(t, expectedOperatingSystems, "os")
 	_checkExepectations(t, expectedBrowserNames, "browser")
+	_checkExepectations(t, expectedDeviceTypes, "deviceType")
 }
 
 func _checkExepectations(t *testing.T, expectations map[string][]string, testType string) {
@@ -25,6 +27,8 @@ func _checkExepectations(t *testing.T, expectations map[string][]string, testTyp
 				testResult, comparedTo = _checkBrowser(uaParseResult, expectation)
 			} else if testType == "os" {
 				testResult, comparedTo = _checkOs(uaParseResult, expectation)
+			} else if testType == "deviceType" {
+				testResult, comparedTo = _checkDeviceType(uaParseResult, expectation)
 			}
 
 			if !testResult {
@@ -46,4 +50,11 @@ func _checkOs(uainfo *UAInfo, expectation string) (result bool, comparedTo strin
 		return false, ""
 	}
 	return (uainfo.OS.Name == expectation), uainfo.OS.Name
+}
+
+func _checkDeviceType(uainfo *UAInfo, expectation string) (result bool, comparedTo string) {
+	if uainfo.DeviceType == nil {
+		return false, ""
+	}
+	return (uainfo.DeviceType.Name == expectation), uainfo.DeviceType.Name
 }

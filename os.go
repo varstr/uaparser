@@ -9,7 +9,7 @@ var (
 
 	macOS = &itemSpec{
 		name:            "Mac OS",
-		mustContains:    []string{"Mac OS"},
+		mustContains:    []string{"Mac OS", "Macintosh"},
 		mustNotContains: []string{"iPad", "iPhone", "iPod"},
 		versionSplitters: [][]string{
 			[]string{"Mac OS ", ";"},
@@ -29,7 +29,7 @@ var (
 	android = &itemSpec{
 		name:            "Android",
 		mustContains:    []string{"Android"},
-		mustNotContains: []string{},
+		mustNotContains: []string{"Windows Phone"},
 		versionSplitters: [][]string{
 			[]string{"Android ", ";"},
 			[]string{"Android-", " "},
@@ -38,8 +38,8 @@ var (
 
 	iOS = &itemSpec{
 		name:            "iOS",
-		mustContains:    []string{"CPU", "OS", "like Mac OS X"},
-		mustNotContains: []string{"Windows Phone OS"},
+		mustContains:    []string{"CPU", "OS", "like Mac OS X", "iphone os"},
+		mustNotContains: []string{"Windows Phone"},
 		versionSplitters: [][]string{
 			[]string{"CPU iPhone OS ", " "},
 			[]string{"CPU OS ", " "},
