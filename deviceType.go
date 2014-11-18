@@ -3,7 +3,7 @@ package uaparser
 var (
 	desktop = &itemSpec{
 		name:            "Desktop",
-		mustContains:    []string{"Windows", "Linux"},
+		mustContains:    []string{"Windows", "Linux", "Mac OS X"},
 		mustNotContains: []string{"Windows Phone", "Android", "ARM"},
 	}
 
