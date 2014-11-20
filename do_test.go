@@ -7,16 +7,21 @@ func TestParse(t *testing.T) {
 	var expectedBrowserNames map[string][]string = GetBrowserNames()
 	var expectedOperatingSystems map[string][]string = GetOSNames()
 	var expectedDeviceTypes map[string][]string = GetDeviceTypes()
+	var totalTestCount = 0
 
-	_checkExepectations(t, expectedOperatingSystems, "os")
-	_checkExepectations(t, expectedBrowserNames, "browser")
-	_checkExepectations(t, expectedDeviceTypes, "deviceType")
+	totalTestCount += _checkExepectations(t, expectedOperatingSystems, "os")
+	totalTestCount += _checkExepectations(t, expectedBrowserNames, "browser")
+	totalTestCount += _checkExepectations(t, expectedDeviceTypes, "deviceType")
+
+	fmt.Printf("Ran %d tests\n", totalTestCount)
 }
 
-func _checkExepectations(t *testing.T, expectations map[string][]string, testType string) {
+func _checkExepectations(t *testing.T, expectations map[string][]string, testType string) (testCount int) {
 	var uaParseResult *UAInfo
 	var testResult bool
 	var comparedTo string
+
+	testCount = 0
 
 	for expectation := range expectations {
 		for key := range expectations[expectation] {
@@ -34,8 +39,11 @@ func _checkExepectations(t *testing.T, expectations map[string][]string, testTyp
 			if !testResult {
 				t.Fatalf("Expected: '%s' got '%s' on: '%s'", expectation, comparedTo, expectations[expectation][key])
 			}
+			testCount += 1
 		}
 	}
+
+	return testCount
 }
 
 func _checkBrowser(uainfo *UAInfo, expectation string) (result bool, comparedTo string) {
