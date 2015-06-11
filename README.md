@@ -11,7 +11,7 @@ HTTP User Agent parser in Golang
 package main
 
 import(
-    "github/ianoshen/uaparser"
+    "github/varstr/uaparser"
     "fmt"
 )
 
@@ -48,8 +48,7 @@ os: Windows version: NT 5.1
 */
 </code></pre>
 
-##TODO##
+##License
 
-* unit-test
-* maybe some android devices(threre's toooo many...)
+[CC0](https://creativecommons.org/publicdomain/zero/1.0/)
 
