@@ -61,10 +61,27 @@ var (
 			"QIHU",
 			"QQBrowser",
 			"SE ",
+			"Edge",
 			"MetaSr",
 			"TaoBrowser",
 		},
 		versionSplitters: [][]string{[]string{"Chrome/", " "}},
+	}
+
+	edge = &itemSpec{
+		name:         "Edge",
+		mustContains: []string{"Chrome", "Edge"},
+		mustNotContains: []string{
+			"CoolNovo",
+			"LBBROWSER",
+			"Maxthon",
+			"QIHU",
+			"QQBrowser",
+			"SE ",
+			"MetaSr",
+			"TaoBrowser",
+		},
+		versionSplitters: [][]string{[]string{"Edge/", " "}},
 	}
 
 	opera = &itemSpec{
@@ -128,6 +145,7 @@ var (
 		firefox,
 		safari,
 		chrome,
+		edge,
 		opera,
 		_360se,
 		sougou,
