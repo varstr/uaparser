@@ -30,7 +30,7 @@ var (
 
 	safari = &itemSpec{
 		name:         "Safari",
-		mustContains: []string{"Safari", "AppleWebKit"},
+		mustContains: []string{"Safari", "AppleWebKit", "safari"},
 		mustNotContains: []string{
 			"Chrome",
 			"Chromium",
@@ -40,11 +40,19 @@ var (
 			"QIHU",
 			"QQBrowser",
 			"SE ",
+			"CriOS",
 			"MetaSr",
 			"TaoBrowser",
 			"PlayStation",
 			"PLAYSTATION",
 			"Opera",
+			"FBAN",
+			"FB_IAB",
+			"Android",
+			"Nokia",
+			"Instagram",
+			"WhatsApp",
+			"YaBrowser",
 		},
 		versionSplitters: [][]string{
 			[]string{"Version/", " "},
@@ -53,7 +61,7 @@ var (
 
 	chrome = &itemSpec{
 		name:         "Chrome",
-		mustContains: []string{"Chrome"},
+		mustContains: []string{"Chrome", "CriOS"},
 		mustNotContains: []string{
 			"CoolNovo",
 			"LBBROWSER",
@@ -64,8 +72,16 @@ var (
 			"Edge",
 			"MetaSr",
 			"TaoBrowser",
+			"FBAN",
+			"FB_IAB",
+			"Instagram",
+			"WhatsApp",
+			"YaBrowser",
 		},
-		versionSplitters: [][]string{[]string{"Chrome/", " "}},
+		versionSplitters: [][]string{
+			[]string{"Chrome/", " "},
+			[]string{"CriOS/", " "},
+		},
 	}
 
 	edge = &itemSpec{
@@ -80,6 +96,11 @@ var (
 			"SE ",
 			"MetaSr",
 			"TaoBrowser",
+			"FBAN",
+			"FB_IAB",
+			"Instagram",
+			"WhatsApp",
+			"YaBrowser",
 		},
 		versionSplitters: [][]string{[]string{"Edge/", " "}},
 	}
@@ -140,6 +161,72 @@ var (
 		},
 	}
 
+	instagram = &itemSpec{
+		name: 	"Instagram",
+		mustContains: []string{"Instagram"},
+		versionSplitters: [][]string{
+			[]string{"Instagram ", " "},
+		},
+	}
+
+	facebook = &itemSpec{
+		name: "Facebook",
+		mustContains: []string{"FB_IAB", "FBAN", "FBAN/FBIOS"},
+		versionSplitters: [][]string{
+			[]string{"FBAV/", ";"},
+		},
+	}
+
+	yahoo = &itemSpec{
+		name: "Yahoo Link Preview",
+		mustContains: []string{"Yahoo Link Preview"},
+
+	}
+
+	androidBrowser = &itemSpec{
+		name: "Android Browser",
+		mustContains: []string{"Dalvik", "AppleWebKit"},
+		mustNotContains: []string{
+			"Chrome",
+			"Chromium",
+			"CoolNovo",
+			"Maxthon",
+			"LBBROWSER",
+			"QIHU",
+			"QQBrowser",
+			"SE ",
+			"MetaSr",
+			"TaoBrowser",
+			"PlayStation",
+			"PLAYSTATION",
+			"Opera",
+			"FBAN",
+			"FB_IAB",
+			"WhatsApp",
+		},
+		versionSplitters: [][]string{
+			[]string{"Dalvik/", " "},
+			[]string{"Version/", " "},
+		},
+	}
+
+	whatsApp = &itemSpec{
+		name: "WhatsApp",
+		mustContains: []string{"WhatsApp"},
+		versionSplitters: [][]string{
+			[]string{"WhatsApp/", " "},
+		},
+	}
+
+	yandex = &itemSpec{
+		name: "Yandex Browser",
+		mustContains: []string{"YaBrowser"},
+		versionSplitters: [][]string{
+			[]string{"YaBrowser/", " "},
+		},
+	}
+
+
 	_BROWSERS = []*itemSpec{
 		ie,
 		firefox,
@@ -153,5 +240,11 @@ var (
 		qq,
 		maxthon,
 		playstation,
+		instagram,
+		facebook,
+		yahoo,
+		androidBrowser,
+		whatsApp,
+		yandex,
 	}
 )
